@@ -66,18 +66,11 @@ public class FirstTest {
 
         driver.findElement(By.xpath("//div[@id='search-prepack']//input[@id='glpriceto']")).sendKeys("30000");
 
-        WebElement element = driver.findElement(By.xpath("//div[@class='_3TQHHekI1h']//input[@name='Производитель Lenovo']"));
-        Actions act = new Actions(driver);
-        act.moveToElement(element)
-                .click()
-                .build()
-                .perform();
+        WebElement element = driver.findElement(By.xpath("//fieldset[@data-autotest-id='7893318']//span[text()='Lenovo']"));
+        element.click();
 
-        element = driver.findElement(By.xpath("//div[@class='_3TQHHekI1h']//input[@name='Производитель HP']"));
-        act.moveToElement(element)
-                .click()
-                .build()
-                .perform();
+        element = driver.findElement(By.xpath("//fieldset[@data-autotest-id='7893318']//span[text()='HP']"));
+        element.click();
 
         int count = driver.findElements(By.xpath("//div[@class='n-snippet-card2__title']")).size();
 
